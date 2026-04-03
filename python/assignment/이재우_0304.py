@@ -28,11 +28,11 @@ def get_rank(avg):
 # 학생 1명의 성적을 입력받는 함수
 def input_sungjuk():
     if os.path.exists("sungjuk_data.csv"):
-        fp = open("sungjuk_data.csv","a",encoding="utf-8",newline="")
+        fp = open("sungjuk_data.csv", "a", encoding="utf-8", newline="")
         fieldnames = ["code","name","kor","eng","math","total","avg","rank"]
         wr = csv.DictWriter(fp, fieldnames=fieldnames)
     else:
-        fp = open("sungjuk_data.csv","a",encoding="utf-8",newline="")
+        fp = open("sungjuk_data.csv", "a", encoding="utf-8", newline="")
         fieldnames = ["code","name","kor","eng","math","total","avg","rank"]
         wr = csv.DictWriter(fp, fieldnames=fieldnames)
         # 파일이 존재하지 않으면 헤더를 추가해줌
@@ -56,7 +56,7 @@ def input_sungjuk():
 # 저장된 학생들의 성적을 출력하는 함수
 def print_sungjuk():
     if os.path.exists("sungjuk_data.csv"):
-        fp = open("sungjuk_data.csv","r",encoding="utf-8",newline="")
+        fp = open("sungjuk_data.csv", "r", encoding="utf-8", newline="")
         lst = list(csv.DictReader(fp))
 
         # 학생 정보가 없는 경우 출력할 정보가 없으므로 함수 반환
@@ -86,7 +86,7 @@ def print_sungjuk():
 # 학생 정보 조회하는 함수
 def search_sungjuk():
     if os.path.exists("sungjuk_data.csv"):
-        fp = open("sungjuk_data.csv","r",encoding="utf-8",newline="")
+        fp = open("sungjuk_data.csv", "r", encoding="utf-8", newline="")
         lst = list(csv.DictReader(fp))
 
         code = input("\n찾을 학번을 입력하세요 => ")
@@ -112,7 +112,7 @@ def search_sungjuk():
 # 학생의 성적을 수정하는 함수
 def update_sungjuk():
     if os.path.exists("sungjuk_data.csv"):
-        fp = open("sungjuk_data.csv","r",encoding="utf-8",newline="")
+        fp = open("sungjuk_data.csv", "r", encoding="utf-8", newline="")
         lst = list(csv.DictReader(fp))
 
         code = input("\n수정할 학생의 학번 입력: ")
@@ -131,7 +131,7 @@ def update_sungjuk():
             print("\n수정할 학생 정보가 없음!!!\n")
         fp.close()
         if flag == 1:
-            fp = open("sungjuk_data.csv","w",encoding="utf-8",newline="")
+            fp = open("sungjuk_data.csv", "w", encoding="utf-8", newline="")
             wr = csv.DictWriter(fp,fieldnames=["code","name","kor","eng","math","total","avg","rank"])
             wr.writeheader()
             wr.writerows(lst)
@@ -143,7 +143,7 @@ def update_sungjuk():
 # 학생 정보를 삭제하는 함수
 def delete_sungjuk():
     if os.path.exists("sungjuk_data.csv"):
-        fp = open("sungjuk_data.csv","r",encoding="utf-8",newline="")
+        fp = open("sungjuk_data.csv", "r", encoding="utf-8", newline="")
         lst = list(csv.DictReader(fp))
 
         code = input("\n삭제할 학생의 학번 입력: ")
@@ -158,7 +158,7 @@ def delete_sungjuk():
             print("\n삭제할 학생 정보가 없음!!!\n")
         fp.close()
         if flag == 1:
-            fp = open("sungjuk_data.csv","w",encoding="utf-8",newline="")
+            fp = open("sungjuk_data.csv", "w", encoding="utf-8", newline="")
             wr = csv.DictWriter(fp,fieldnames=["code","name","kor","eng","math","total","avg","rank"])
             wr.writeheader()
             wr.writerows(lst)
