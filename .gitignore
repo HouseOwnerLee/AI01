@@ -1,0 +1,26 @@
+﻿.ipynb_checkpoints
+
+config.py
+/runs/*
+!/yolov3_prac/
+/yolov3_prac/*
+!/yolov3_prac/*.py
+!/yolov3_prac/*.ipynb
+/mini_project_07/fall/
+/mini_project_07/fall_dataset/
+*.avi
+*.mp4
+*gz
+*.npy
+
+# 파이썬 캐시 제외
+__pycache__/
+*.pyc
+
+# 데이터셋 및 대용량 모델 파일 예시 (프로젝트 상황에 맞게 조절)
+*.pt
+*.pth
+*.pkl
+*.h5
+data/
+dataset/
