@@ -44,6 +44,7 @@ fqdn==1.5.1
 fsspec==2026.4.0
 gast==0.7.0
 gensim==4.4.0
+git-filter-repo==2.47.0
 google-auth==2.53.0
 google-auth-oauthlib==1.4.0
 google-pasta==0.2.0
